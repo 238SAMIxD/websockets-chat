@@ -14,9 +14,15 @@ const server = app.listen(PORT, () => {
 
 const io = new Server(server);
 io.on("connection", socket => {
-    console.log(socket);
-
     socket.on("chat", chat => {
         io.sockets.emit("chat", chat);
+    });
+
+    socket.on("typing", chat => {
+        socket.broadcast.emit("typing", chat);
+    });
+
+    socket.on("stopTyping", chat => {
+        socket.broadcast.emit("stopTyping", chat);
     });
 });
