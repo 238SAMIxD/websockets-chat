@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OnGuard Chat</title>
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.0/socket.io.min.js"></script>
     <script src="script.js" defer></script>
 </head>
 <body>
-    
+    <div class="content">
+        <div class="chat">
+            <div class="output"></div>
+        </div>
+        <label for="nickname">Nickname</label><input type="text" name="nickname" id="nickname">
+        <label for="message">Message</label><input type="text" name="message" id="message">
+        <button class="send">Send</button>
+    </div>
 </body>
 </html>
