@@ -3,6 +3,7 @@ const socket = io.connect("http://10.66.90.60:1234");
 const nickname = document.querySelector("#nickname");
 const message = document.querySelector("#message");
 const button = document.querySelector(".send");
+const online = document.querySelector(".online");
 const output = document.querySelector(".output");
 const feedback = document.querySelector(".feedback");
 
@@ -42,4 +43,8 @@ socket.on("typing", chat => {
 
 socket.on("stopTyping", chat => {
     feedback.querySelector(`.n${chat.nickname}`).remove();
+});
+
+socket.on("online", number => {
+    online.innerHTML = `Online: ${number}`;
 });

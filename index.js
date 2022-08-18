@@ -25,4 +25,10 @@ io.on("connection", socket => {
     socket.on("stopTyping", chat => {
         socket.broadcast.emit("stopTyping", chat);
     });
+
+    socket.on("disconnect", () => {
+        io.allSockets().then(r => io.sockets.emit("online", r.size));
+    });
+
+    io.allSockets().then(r => io.sockets.emit("online", r.size));
 });
