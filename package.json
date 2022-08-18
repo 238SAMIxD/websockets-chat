@@ -1,0 +1,28 @@
+{
+  "name": "websockets-chat",
+  "version": "1.0.0",
+  "description": "Repository for Websockets learning purposes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://10.66.156.31:3000/238samixd/websockets-chat.git"
+  },
+  "keywords": [
+    "learning",
+    "websockets",
+    "node",
+    "javascript"
+  ],
+  "author": "Samuel Jędrzejewski",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "node": "^16.17.0",
+    "nodemon": "^2.0.19",
+    "open": "^8.4.0",
+    "path": "^0.12.7"
+  }
+}
